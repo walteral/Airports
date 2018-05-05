@@ -218,12 +218,3 @@ function addLabel(layer, id) {
         }
     }
 }
-
-// 17. We will update the visualization of the labels whenever you zoom the map.
-mymap.on("zoomend", function(){
-    var i = 0;
-    counties.eachLayer(function(label){
-        addLabel(label, ++i);
-    });
-    labelEngine.update();
-});
